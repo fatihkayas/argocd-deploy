@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: training-deployment
-    labels:
-        app: training
-    annotations:
-        version: v2.0.0  # Add the version here
+  name: training-deployment
+  labels:
+    app: training
+  annotations:
+    version: v3.0.0  # Add the version here
 spec:
-    replicas: 1
-    selector:
-        matchLabels:
-            app: training
-    template:
-        metadata:
-            labels:
-                app: training
-        spec:
-            containers:
-                - name: training-container
-                    image: my
-                    ports:
-                        - containerPort: 8080
+  replicas: 1
+  selector:
+    matchLabels:
+      app: training
+  template:
+    metadata:
+      labels:
+        app: training
+    spec:
+      containers:
+        - name: training-container
+          image: my  # Replace 'my' with the actual image name
+          ports:
+            - containerPort: 8080
