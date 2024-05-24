@@ -19,6 +19,8 @@ spec:
     spec:
       containers:
         - name: training-container
-          image: my  # Replace 'my' with the actual image name
+          image: 1.26.0-alpine  # Replace 'my' with the actual image name
           ports:
             - containerPort: 8080
+
+            
